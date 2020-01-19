@@ -11,6 +11,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet">
     </head>
   <body>
+   
      <br>
  
            <div class = "container"> 
@@ -23,7 +24,7 @@
                 <form ref='uploadForm' 
                 name = 'kk'
                 id='uploadForm' 
-                action='http://127.0.0.1:8000/' 
+              
                 method='post' 
                 style = "padding-left: 100px;"
                 encType="multipart/form-data">
@@ -109,3 +110,10 @@
   <!-- Footer -->
   </body>
 </html>
+<script lang="javascript">
+    var x = 'http://127.0.0.1/'
+    var y = x + location.port
+    document.getElementById("uploadForm").action = y
+    alert(y)
+    console.log("kkkk")
+    </script>

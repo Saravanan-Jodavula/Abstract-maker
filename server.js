@@ -69,7 +69,7 @@ exports.jko = jko;
   
 });
 
-app.listen(PORT, function() {
+app.listen(PORT||process.env.PORT , function() {
   console.log('Express server listening on port ', PORT); // eslint-disable-line
 });
 
