@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>abstract maker</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet">
+    </head>
+  <body>
+     <br>
+ 
+           <div class = "container"> 
+               <div class="row">
+                   <h1 style="text-align: center;">ABSTRACT MAKER</h1>
+               </div>
+                <div class="card">   
+                <div class="row">
+                    <div class="col-md-5">
+                <form ref='uploadForm' 
+                name = 'kk'
+                id='uploadForm' 
+                action='http://127.0.0.1:8000/' 
+                method='post' 
+                style = "padding-left: 100px;"
+                encType="multipart/form-data">
+                <p>Title: </p><input type="text" name="title" />
+                <p>Name: </p><input type="text" name="name" />
+                <p>Class: </p><input type="text" name="class" />
+                <p>Hall Ticket no.</p> <input type="text" name="ht" />
+                <p>Email</p> <input type="text" name="email" />
+                <p>Image</p> <input type="file" name="sampleFile" />
+                <p>content</p> <input type="text" name="Abs2" />
+              
+                    <input type='submit' value='Upload!' />
+                    
+                </form>
+            </div>
+            <div class="col-md-8">
+                <br>
+                <br>
+                <h2>Usage:</h2>
+                <p>This webapp helps you create abstracts in IEEE format. Fill in the author details and upload an image consisting of content to get your abstract done.</p>
+                <p> Star my github repos if you like the app ;)</p>
+                
+               
+            </div>
+        </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+
+
+      
+<!-- Footer -->
+<footer class="page-footer font-small cyan darken-3">
+
+    <!-- Footer Elements -->
+    <div class="container">
+  
+      <!-- Grid row-->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-12 py-5">
+          <div class="mb-5 flex-center">
+  
+            <!-- Facebook -->
+            <a class="fb-ic" href="https://www.facebook.com/saravanan.jodavula">
+              <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!-- Twitter -->
+            <!--Linkedin -->
+            <a class="li-ic" href="https://in.linkedin.com/in/saravanan-jodavula-3643b1174">
+              <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic" href="https://www.instagram.com/saravanan_jodavula/">
+              <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!--Pinterest-->
+            <a class="pin-ic" href="https://github.com/saravanan-jodavula">
+              <i class="fab fa-github fa-lg white-text fa-2x"> </i>
+            </a>
+          </div>
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="github.com/saravanan-jodavula">Saravanan Jodavula</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+  </body>
+</html>

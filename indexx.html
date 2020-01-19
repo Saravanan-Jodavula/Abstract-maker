@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>abstract maker</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+  <body>
+      <br>
+      <br>
+      <br>
+ 
+           <div class = "container"> 
+               <div class="row">
+                   <h1 style="text-align: center;">ABSTRACT MAKER</h1>
+               </div>
+                <div class="card">   
+                <div class="row">
+                    <div class="col-md-4">
+                <form ref='uploadForm' 
+                name = 'kk'
+                id='uploadForm' 
+                action='http://127.0.0.1:8000/' 
+                method='post' 
+                style = "padding-left: 100px;"
+                encType="multipart/form-data">
+                <p>Title: </p><input type="text" name="title" />
+                <p>Name1: </p><input type="text" name="name" />
+                <p>Name2: </p><input type="text" name="name2" />
+                <p>Class1: </p><input type="text" name="class" />
+                <p>Class2: </p><input type="text" name="class2" />
+                <p>Hall Ticket no1.</p> <input type="text" name="ht" />
+                <p>Hall Ticket no2.</p> <input type="text" name="ht2" />
+                <p>Email 1</p> <input type="text" name="email" />
+                <p>Email 2</p> <input type="text" name="email" />
+                <p>Abstract content</p> <input type="text" name="abs1" />
+                    <input type='submit' value='Upload!' />
+                    
+                </form>
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+            </div>
+        </div>
+      
+
+  </body>
+</html>

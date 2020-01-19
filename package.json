@@ -1,0 +1,23 @@
+{
+  "name": "docUapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "docxtemplater": "^3.16.3",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.6",
+    "lodash": "^4.17.15",
+    "node-tesseract-ocr": "^1.0.0",
+    "pizzip": "^3.0.6",
+    "yargs": "^4.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "saravanan",
+  "license": "ISC"
+}
