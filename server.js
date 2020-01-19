@@ -10,9 +10,6 @@ app.use('/form', express.static(__dirname + '/index.html'));
 // default options
 app.use(fileUpload());
 
-app.get('/ping', function(req, res) {
-  res.send('pong');
-});
 
 app.post('/', function(req, res) {
   let sampleFile;
