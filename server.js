@@ -5,7 +5,7 @@ const fs = require('fs')
 
 
 const PORT = 8000;
-app.use('/form', express.static(__dirname + '/index.html'));
+app.use(express.static(__dirname));
 
 // default options
 app.use(fileUpload());
