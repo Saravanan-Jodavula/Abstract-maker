@@ -4,7 +4,7 @@ const app = express();
 const fs = require('fs')
 
 
-const PORT = 8000;
+const PORT = 8000;  //use this while testing on local server
 app.use(express.static(__dirname));
 
 // default options
@@ -50,15 +50,16 @@ else{
     
      fs.readFile('flag','utf8',(err,data) =>{
        if(err) throw err
-       console.log("sex sex fast fast",data)
+       console.log("checc checc fast fast",data)
        
-       if(data==="sex"){
-           console.log("seks speed too much")
+       if(data==="checc"){
+          console.log("output is being generated")
            res.download('output.docx')
            return 0
        }
     })
    }
+
   
 exports.jko = jko;
 
@@ -70,7 +71,7 @@ exports.jko = jko;
 });
 
 app.listen(process.env.PORT , function() {
-  console.log('Express server listening on port ', PORT);
+  console.log('Express server listening on port ', process.env.PORT);
   console.log(process.env.PORT) // eslint-disable-line
 });
 

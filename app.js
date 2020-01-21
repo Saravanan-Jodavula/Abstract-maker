@@ -90,7 +90,7 @@ if (fs.existsSync(`${nof}`)) {
        
                    // buf is a nodejs buffer, you can either write it to a file or do anything else with it.
                    fs.writeFileSync(path.resolve(__dirname, "output.docx"), buf);
-                  var ee = "sex"
+                  var ee = "checc"
                    fs.writeFile('flag',ee,function(){
                     const pkr = require("./server");
                     const express = require('express');
