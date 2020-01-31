@@ -44,7 +44,7 @@ app.post('/', upload.single('sampleFile'), function (req, res, next) {
       var x = 1
        const okr = require('./app')
        okr.mainn()
-       //fs.unlinkSync("image.jpg")
+       fs.unlinkSync(sampleFile.path)
        const jko = () =>{
 
         fs.readFile('flag','utf8',(err,data) =>{
