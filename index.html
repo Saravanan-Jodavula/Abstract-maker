@@ -1,69 +1,71 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>abstract maker</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <!-- Font Awesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-<!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-<!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet">
-    </head>
-  <body>
 
-     <br>
+<head>
+  <title>abstract maker</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet">
+</head>
 
-           <div class = "container">
-               <div class="row">
-                   <h1 style="text-align: center;">ABSTRACT MAKER</h1>
-               </div>
-                <div class="card">
-                <div class="row">
-                    <div class="col-md-5">
-                <form ref='uploadForm'
-                name = 'kk'
-                id='uploadForm'
-                action='/'
-                method='post'
-                style = "padding-left: 100px;"
-                encType="multipart/form-data">
-                <p>Title: </p><input type="text" name="title" />
-                <p>Name: </p><input type="text" name="name" />
-                <p>Class: </p><input type="text" name="class" />
-                <p>Hall Ticket no.</p> <input type="text" name="ht" />
-                <p>Email</p> <input type="text" name="email" />
-                <p>Image</p> <input type="file" name="sampleFile" />
-                <p>content</p> <input type="text" name="Abs2" />
+<body>
 
-                    <input type='submit' value='Upload!' />
+  <br>
 
-                </form>
-            </div>
-            <div class="col-md-6">
-                <br>
-                <br>
-                <h2>Usage:</h2>
-                <p>This webapp helps you create abstracts in IEEE format. Fill in the author details and upload an image consisting of content to get your abstract done.</p>
-                <p><b><strike>NOTE: Avoid having spaces and special characters in the image name.</b></p>
-                </strike><b>ANY FILE NAME ACCEPTED :P</b><p> Star my github repos if you like the app ;)</p>
+  <div class="container">
+    <div class="row">
+      <h1 style="text-align: center;">ABSTRACT MAKER</h1>
+    </div>
+    <div class="card">
+      <div class="row">
+        <div class="col-md-5">
+          <form ref='uploadForm' name='kk' id='uploadForm' action='/' method='post' style="padding-left: 100px;"
+            encType="multipart/form-data">
+            <p>Title: </p><input type="text" name="title" />
+            <p>Name: </p><input type="text" name="name" />
+            <p>Class: </p><input type="text" name="class" />
+            <p>Hall Ticket no.</p> <input type="text" name="ht" />
+            <p>Email</p> <input type="text" name="email" />
+            <p>Image</p> <input type="file" name="sampleFile" />
+            <p>content</p> <input type="text" name="Abs2" />
 
+            <input type='submit' value='Upload!' />
 
-            </div>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <br>
+          <br>
+          <h2>Usage:</h2>
+          <p>This webapp helps you create abstracts in IEEE format. Fill in the author details and upload an image
+            consisting of content to get your abstract done.</p>
+          <p><b><strike>NOTE: Avoid having spaces and special characters in the image name.</b></p>
+          </strike><b>ANY FILE NAME ACCEPTED :P</b>
+          <p> Star my github repos if you like the app ;)</p>
+
 
         </div>
-        <div class="row"><div class="col-md-12" ><br></div></div>
-            </div>
-        </div>
-        <br>
+
+      </div>
+      <div class="row">
+        <div class="col-md-12"><br></div>
+      </div>
+    </div>
+  </div>
+  <br>
 
 
 
 
 
 
-<!-- Footer -->
-<footer class="page-footer font-small cyan darken-3">
+  <!-- Footer -->
+  <footer class="page-footer font-small cyan darken-3">
 
     <!-- Footer Elements -->
     <div class="container">
@@ -110,12 +112,13 @@
 
   </footer>
   <!-- Footer -->
-  </body>
+</body>
+
 </html>
 <script lang="javascript">
-    var x = '/'
+  var x = '/'
 
-    document.getElementById("uploadForm").action = x
-    console.log("Posted")
-    console.log(location.port)
-    </script>
+  document.getElementById("uploadForm").action = x
+  console.log("Posted")
+  console.log(location.port)
+</script>
