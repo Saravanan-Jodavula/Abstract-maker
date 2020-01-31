@@ -1,77 +1,75 @@
 const express = require('express');
-const fileUpload = require('express-fileupload');
+const multer = require('multer');
 const app = express();
 const fs = require('fs')
-
-
-const PORT = 8000;  //use this while testing on local server
+const path = require('path');
 app.use(express.static(__dirname));
 
-// default options
-app.use(fileUpload());
+//constant definitions
+const PORT = process.env.PORT || 8000;
+const NODE_ENV = process.env.NODE_ENV || 'development';
+app.set('port', PORT);
+app.set('env', NODE_ENV);
+var upload = multer({ dest: 'uploads/' })
 
 
-app.post('/', function(req, res) {
-  let sampleFile;
-  let uploadPath;
-  
-  
+app.post('/', upload.single('sampleFile'), function (req, res, next) {
+
   const okr = require('./app')
-  if (!req.files || Object.keys(req.files).length === 0) {
-     console.log("no file gang")
+  if (!req.file || Object.keys(req.file).length === 0) {
+     console.log("No File Uploaded")
      fs.writeFileSync('data.json',JSON.stringify(req.body))
   okr.mainn()
   res.download('output.docx')
    }
-else{
-  console.log('req.files >>>', req.files); // eslint-disable-line
 
-  sampleFile = req.files.sampleFile;
+   else{
+     console.log('req.file >>>', req.file); // eslint-disable-line
 
-  uploadPath = __dirname + '/' + sampleFile.name;
+     sampleFile = req.file
 
-  sampleFile.mv(uploadPath, function(err) {
-    // if (err) {
-    //   return res.status(500).send(err);
-    // }
+     uploadPath =  sampleFile.path;
 
-   
-   fs.writeFileSync('data.json',JSON.stringify(req.body))
-    /////////////////////////////////////////////////////
-    console.log(sampleFile.name)
-    fs.writeFileSync('filename',sampleFile.name)
-    console.log(typeof(req.body))
-    console.log(req.body)
-   var x = 1
-    const okr = require('./app')
-    okr.mainn()
-    //fs.unlinkSync("image.jpg")
-    const jko = () =>{
-    
-     fs.readFile('flag','utf8',(err,data) =>{
-       if(err) throw err
-       console.log("checc checc fast fast",data)
-       
-       if(data==="checc"){
-          console.log("output is being generated")
-           res.download('output.docx')
-           return 0
-       }
-    })
+       // if (err) {
+       //   return res.status(500).send(err);
+       // }
+
+
+      fs.writeFileSync('data.json',JSON.stringify(req.body))
+       /////////////////////////////////////////////////////
+       console.log(sampleFile.name)
+       fs.writeFileSync('filename',sampleFile.path)
+       console.log(typeof(req.body))
+       console.log(req.body)
+      var x = 1
+       const okr = require('./app')
+       okr.mainn()
+       //fs.unlinkSync("image.jpg")
+       const jko = () =>{
+
+        fs.readFile('flag','utf8',(err,data) =>{
+          if(err) throw err
+          console.log("checc checc fast fast",data)
+
+          if(data==="checc"){
+             console.log("output is being generated")
+              res.download('output.docx')
+              return 0
+          }
+       })
+      }
+
+
+   exports.jko = jko;
+
+
+
    }
 
-  
-exports.jko = jko;
 
-  
-  });
-}
-  
-  
-});
+   });
+   app.listen(PORT , function() {
+     console.log('Express server listening on port ', PORT);
 
-app.listen(process.env.PORT , function() {
-  console.log('Express server listening on port ', process.env.PORT);
-  console.log(process.env.PORT) // eslint-disable-line
-});
 
+})

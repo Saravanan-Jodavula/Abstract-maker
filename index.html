@@ -11,21 +11,21 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet">
     </head>
   <body>
-   
+
      <br>
- 
-           <div class = "container"> 
+
+           <div class = "container">
                <div class="row">
                    <h1 style="text-align: center;">ABSTRACT MAKER</h1>
                </div>
-                <div class="card">   
+                <div class="card">
                 <div class="row">
                     <div class="col-md-5">
-                <form ref='uploadForm' 
+                <form ref='uploadForm'
                 name = 'kk'
-                id='uploadForm' 
-                action='sleepy-chamber-82758.herokuapp.com/'
-                method='post' 
+                id='uploadForm'
+                action='/'
+                method='post'
                 style = "padding-left: 100px;"
                 encType="multipart/form-data">
                 <p>Title: </p><input type="text" name="title" />
@@ -35,9 +35,9 @@
                 <p>Email</p> <input type="text" name="email" />
                 <p>Image</p> <input type="file" name="sampleFile" />
                 <p>content</p> <input type="text" name="Abs2" />
-              
+
                     <input type='submit' value='Upload!' />
-                    
+
                 </form>
             </div>
             <div class="col-md-6">
@@ -45,36 +45,36 @@
                 <br>
                 <h2>Usage:</h2>
                 <p>This webapp helps you create abstracts in IEEE format. Fill in the author details and upload an image consisting of content to get your abstract done.</p>
-                <p><b>NOTE: Avoid having spaces and special characters in the image name.</b></p>
-                <p> Star my github repos if you like the app ;)</p>
-                
-               
+                <p><b><strike>NOTE: Avoid having spaces and special characters in the image name.</b></p>
+                </strike><b>ANY FILE NAME ACCEPTED :P</b><p> Star my github repos if you like the app ;)</p>
+
+
             </div>
-          
+
         </div>
         <div class="row"><div class="col-md-12" ><br></div></div>
             </div>
         </div>
         <br>
-    
-      
-        
 
 
-      
+
+
+
+
 <!-- Footer -->
 <footer class="page-footer font-small cyan darken-3">
 
     <!-- Footer Elements -->
     <div class="container">
-  
+
       <!-- Grid row-->
       <div class="row">
-  
+
         <!-- Grid column -->
         <div class="col-md-12 py-5">
           <div class="mb-5 flex-center">
-  
+
             <!-- Facebook -->
             <a class="fb-ic" href="https://www.facebook.com/saravanan.jodavula">
               <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
@@ -95,28 +95,27 @@
           </div>
         </div>
         <!-- Grid column -->
-  
+
       </div>
       <!-- Grid row-->
-  
+
     </div>
     <!-- Footer Elements -->
-  
+
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© 2020 Copyright:
       <a href="https://github.com/saravanan-jodavula">Saravanan Jodavula</a>
     </div>
     <!-- Copyright -->
-  
+
   </footer>
   <!-- Footer -->
   </body>
 </html>
 <script lang="javascript">
-    var x = 'https://abstractmaker.herokuapp.com:'
-    var y = x + location.port
-    document.getElementById("uploadForm").action = y
-  //  alert(y)
-    console.log("kkkk")
+    var x = '/'
+
+    document.getElementById("uploadForm").action = x
+    console.log("Posted")
     console.log(location.port)
     </script>
