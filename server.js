@@ -4,7 +4,7 @@ const app = express();
 const fs = require('fs')
 
 
-const PORT = 8000;  //use this while testing on local server
+const PORT = process.env.PORT || 8000;  //use this while testing on local server
 app.use(express.static(__dirname));
 
 // default options
@@ -14,8 +14,8 @@ app.use(fileUpload());
 app.post('/', function(req, res) {
   let sampleFile;
   let uploadPath;
-  
-  
+
+
   const okr = require('./app')
   if (!req.files || Object.keys(req.files).length === 0) {
      console.log("no file gang")
@@ -28,14 +28,14 @@ else{
 
   sampleFile = req.files.sampleFile;
 
-  uploadPath = __dirname + '/' + sampleFile.name;
+  uploadPath = __dirname + '/uploads/' + sampleFile.name;
 
   sampleFile.mv(uploadPath, function(err) {
     // if (err) {
     //   return res.status(500).send(err);
     // }
 
-   
+
    fs.writeFileSync('data.json',JSON.stringify(req.body))
     /////////////////////////////////////////////////////
     console.log(sampleFile.name)
@@ -47,11 +47,11 @@ else{
     okr.mainn()
     //fs.unlinkSync("image.jpg")
     const jko = () =>{
-    
+
      fs.readFile('flag','utf8',(err,data) =>{
        if(err) throw err
        console.log("checc checc fast fast",data)
-       
+
        if(data==="checc"){
           console.log("output is being generated")
            res.download('output.docx')
@@ -60,18 +60,17 @@ else{
     })
    }
 
-  
+
 exports.jko = jko;
 
-  
+
   });
 }
-  
-  
+
+
 });
 
-app.listen(process.env.PORT , function() {
-  console.log('Express server listening on port ', process.env.PORT);
-  console.log(process.env.PORT) // eslint-disable-line
-});
+app.listen(PORT , function() {
+  console.log('Express server listening on port ', PORT);
 
+});
